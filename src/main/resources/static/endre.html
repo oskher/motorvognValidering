@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Motorvognregister uke12 database</title>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css">
+</head>
+
+<body>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-4">
+            <h1>Motorvognregister endre:</h1>
+                <form class="form"> <!-- denne bestemmer hvordan input ser ut, ferdiglagd design-->
+                    <tr>
+                        <input type="text" id="id" hidden>
+                        <td>
+                            <label for="personNr">Eiers personnr:</label>
+                            <input type="text" id="personNr" class="form-control">
+                            <span id="feilPersonNr" style="color: red"></span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="navn">Eiers navn:</label>
+                            <input type="text" id="navn" class="form-control">
+                            <span id="feilNavn" style="color: red"></span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="adresse">Eiers adresse:</label>
+                            <input type="text" id="adresse" class="form-control">
+                            <span id="feilAdresse" style="color: red"></span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="kjennetegn"> Kjennetegn</label>
+                            <input type="text" id="kjennetegn" class="form-control">
+                            <span id="feilKjennetegn" style="color: red"></span>
+                        </td>
+                    </tr>
+                    <div class="form-group">
+                        <label for="merke">Merke</label>
+                        <div id="merke" class="dropdown"></div>
+                        <span id="feilMerke" style="color: red"></span>
+
+                    </div>
+                    <div class="form-group">
+                        <label for="type">Type</label>
+                        <div id="type" class="dropdown">
+
+                        </div>
+                        <span id="feilType" style="color: red"></span>
+
+                    </div>
+                </form>
+            <button class="btn btn-primary" onclick="endreEnBil()">Endre</button>
+        </div>
+    </div>
+</div>
+<script src="endre.js"></script>
+<script src="endre.js"></script>
+
+</body>
+</html>
