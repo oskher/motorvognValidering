@@ -18,28 +18,28 @@
                     <input type="text" id="id" hidden>
                     <td>
                         <label for="personNr">Eiers personnr:</label>
-                        <input type="text" id="personNr" class="form-control">
+                        <input type="text" id="personNr" class="form-control" onchange="validerPersonNr()">
                         <span id="feilPersonNr" style="color: red"></span>
                     </td>
                 </tr>
                 <tr>
                     <td>
                         <label for="navn">Eiers navn:</label>
-                        <input type="text" id="navn" class="form-control">
+                        <input type="text" id="navn" class="form-control" onchange="validerNavn()">
                         <span id="feilNavn" style="color: red"></span>
                     </td>
                 </tr>
                 <tr>
                     <td>
                         <label for="adresse">Eiers adresse:</label>
-                        <input type="text" id="adresse" class="form-control">
+                        <input type="text" id="adresse" class="form-control" onchange="validerAdresse()">
                         <span id="feilAdresse" style="color: red"></span>
                     </td>
                 </tr>
                 <tr>
                     <td>
                         <label for="kjennetegn"> Kjennetegn</label>
-                        <input type="text" id="kjennetegn" class="form-control">
+                        <input type="text" id="kjennetegn" class="form-control" onchange="validerKjennetegn()">
                         <span id="feilKjennetegn" style="color: red"></span>
                     </td>
                 </tr>
@@ -63,5 +63,7 @@
     </div>
 </div>
 <script src="registrer.js"></script>
+<script src="validering.js"></script>
+
 </body>
 </html>

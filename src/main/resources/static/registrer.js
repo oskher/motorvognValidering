@@ -17,7 +17,7 @@ function lagre(){
         /* Hvorfor trenger jeg en 3. konstruktør/en egen i JS?*/
     };
 
-    if(ingenValideringsfeil()){ // valideringsfeil
+    if(ingenValideringsFeil()){ // valideringsfeil
 
         const url = "/registrer"; // Inge feil? -Lagre på server.
         $.post(url, Bil, function(){
@@ -87,7 +87,7 @@ function formaterBiler(biler){
     $("#merke").change(function (){  // Change  = onchange i JS
         let utT = "<select id='valgtType'>";
         const valgtMerke = $("#valgtMerke").val();
-        $("#feilMerke").html("Feil input")
+        $("#feilMerke").html("")
         for(const bil of biler ){
             if(bil.merke === valgtMerke){
                 utT+="<option>"+bil.type+"</option>";

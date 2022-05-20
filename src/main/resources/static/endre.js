@@ -31,15 +31,20 @@ function endreEnBil(){  // Endres fra lagre i index.
         /* Hvorfor trenger jeg en 3. konstruktør/en egen i JS?*/
     };
 
-    // NB! Feil her?
-    $.post("/endreEn", bil, () => {
-        henteData();
-    }).fail(function (jqXHR) {
-        const json = $.parseJSON(jqXHR.responseText);
+    if(ingenValideringsfeil()){ // valideringsfeil
 
-        $("#feil").html(json.message);
-    });
-    window.location.href = "/";  //  Sender bruker tilbake til index.html
+        const url = "/registrer"; // Inge feil? -Lagre på server.
+        $.post(url, Bil, function(){
+            henteData();
+
+        }).fail(function (jqXHR) {  //  Metode for feil i server-lagring
+            const json = $.parseJSON(jqXHR.responseText);
+
+            $("#feil").html(json.message);
+        });
+
+        window.location.href = "/";  // oppdaterer og sender bruker tilbake til index.html
+    }
 }
 
 

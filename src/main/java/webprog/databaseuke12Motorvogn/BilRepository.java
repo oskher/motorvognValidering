@@ -19,10 +19,10 @@ public class BilRepository {
 
 
     private boolean validerBil(Bil bil){ // bestemmer input-vilkår
-        String regexpPersonnr = "[0-9]{1,9}";
-        String regexpNavn ="[a-zæøåA-zæøå]{1,13}";
-        String regexpAdresse = "[a-zæøåA-zæøå \\]{1,40}";
-        String regexpKjennetegn = "[a-zæøåA-zæøå0-9]{1,8}";;
+        String regexpPersonnr = "[0-9]{11}";
+        String regexpNavn ="[a-zæøåA-zæøå]{1,20}";
+        String regexpAdresse = "[0-9a-zæøåA-ZÆØÅ. \\-]{2,40}";
+        String regexpKjennetegn = "[a-zæøåA-zæøå0-9]{1,8}";
         //         regexp = regular expressions.
 
         boolean personnrOK = bil.getPersonnr().matches(regexpPersonnr);
